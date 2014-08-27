@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="CoreAdminPlugin" SymbolicName="CoreAdminPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="CoreAdminPlugin.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\CoreAdminPlugin.dll" Share="false" />
+  </Runtime>
+</Bundle>
