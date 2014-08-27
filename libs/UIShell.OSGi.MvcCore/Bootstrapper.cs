@@ -34,9 +34,9 @@ namespace UIShell.OSGi.MvcCore
         public void StartBundleRuntime()
         {
             FileLogUtility.Debug("WebSite is starting.");
-            //AddPreDefinedRefAssemblies();
+            AddPreDefinedRefAssemblies();
             // Set SQLCE compact before BundleRuntime starting.
-            AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", true);
+            //AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", true);
 
             BundleRuntime = CreateBundleRuntime();
             FileLogUtility.Debug("Framework is starting.");

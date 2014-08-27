@@ -58,7 +58,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="UIShell.OSGi">
-      <HintPath>..\..\..\..\libs\UIShell.OSGi.MvcCore\bin\Debug\UIShell.OSGi.dll</HintPath>
+      <HintPath>..\..\..\..\packages\iOpenworks\UIShell.OSGi.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace Mangtas.Web
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "BIPS.Web.Controllers" }
+                namespaces: new[] { "Mangtas.Web.Controllers" }
             );
         }
     }
