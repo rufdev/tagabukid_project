@@ -111,7 +111,7 @@ Backup*/
 UpgradeLog*.XML
 
 # NuGet
-#packages/
+packages/
 *.pubxml
 *.pubxml
 *.pubxml
@@ -120,4 +120,4 @@ UpgradeLog*.XML
 /ProjectTemplate
 
 #config
-Web.config
+#Web.config
