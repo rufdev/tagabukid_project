@@ -9,14 +9,6 @@ namespace Mangtas.Web
     {
         public void Configuration(IAppBuilder app)
         {
-            //var pluginFolder = new DirectoryInfo(HostingEnvironment.MapPath("~/modules"));
-            //Console.WriteLine(pluginFolder.ToString());
-            //var pluginAssemblies = pluginFolder.GetFiles("*.dll", SearchOption.AllDirectories);
-            //foreach (var pluginAssemblyFile in pluginAssemblies)
-            //{
-            //    var asm = Assembly.LoadFrom(pluginAssemblyFile.FullName);
-            //    BuildManager.AddReferencedAssembly(asm);
-            //}
             ConfigureAuth(app);
         }
     }
