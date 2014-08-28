@@ -105,7 +105,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BIPS.Repository.Pattern\Mangtas.Repository.Pattern.csproj">
+    <ProjectReference Include="..\Mangtas.Repository.Pattern\Mangtas.Repository.Pattern.csproj">
       <Project>{6E682A14-C872-4813-B620-76E108DEA683}</Project>
       <Name>Mangtas.Repository.Pattern</Name>
     </ProjectReference>
