@@ -555,3 +555,55 @@ Wed, 27 Aug 2014 22:03:45 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Lo
 Wed, 27 Aug 2014 22:03:45 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
 Wed, 27 Aug 2014 22:03:46 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'App_Web_55yo3inc, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
 Wed, 27 Aug 2014 22:03:48 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.VisualStudio.Web.PageInspector.HtmlParser, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:20 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   WebSite is starting.
+Thu, 28 Aug 2014 09:08:20 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Add assembly 'UIShell.OSGi, Version=1.2.2.5, Culture=neutral, PublicKeyToken=c86472448ee87261 to top level referenced assemblies.'
+Thu, 28 Aug 2014 09:08:20 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Add assembly 'UIShell.OSGi.MvcCore, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null to top level referenced assemblies.'
+Thu, 28 Aug 2014 09:08:20 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Framework is starting.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Bundle 'UIShell.OSGi.SystemBundle, 1.0.0.0' is starting.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Error|   Failed to load assembly 'UIShell.OSGi.XmlSerializers, Version=1.2.2.5, Culture=neutral, PublicKeyToken=c86472448ee87261'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.GeneratedCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Bundle 'CoreAdminPlugin, 1.0.0.0' is starting.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'CoreAdminPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Bundle 'CoreAdminPlugin, 1.0.0.0' is in state 'Active'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Bundle 'UIShell.OSGi.SystemBundle, 1.0.0.0' is in state 'Active'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Add assembly 'CoreAdminPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null to top level referenced assemblies.'
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembiles from bundle CoreAdminPlugin
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Framework is started.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.VisualStudio.Web.PageInspector.Runtime, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Reflection, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Threading, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Globalization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Runtime.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Linq.Expressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:21 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'SMDiagnostics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:22 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.VisualStudio.Web.PageInspector.Tracing, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:22 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Web.RegularExpressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:22 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Data.Services.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'App_global.asax.9f-zf1no, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.VisualBasic.Activities.Compiler, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.ServiceModel.Internals, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:23 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:24 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Reflection.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:25 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Anonymously Hosted DynamicMethods Assembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:25 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Error|   Failed to load assembly 'Microsoft.Practices.Unity.resources, Version=3.5.0.0, Culture=en-US, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:25 GMT|   |FrameworkThread|UIShell.OSGi.Logger|Error|   Failed to load assembly 'Microsoft.Practices.Unity.resources, Version=3.5.0.0, Culture=en-US, PublicKeyToken=31bf3856ad364e35'.
+Thu, 28 Aug 2014 09:08:28 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Web.Mobile, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:29 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'App_Web_lacswh4m, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:29 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'App_Web_bpzg1fkj, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:29 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
+Thu, 28 Aug 2014 09:08:30 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'App_Web_1as2qdki, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+Thu, 28 Aug 2014 09:08:32 GMT|   |No Thread Name|UIShell.OSGi.Logger|Debug|   Loaded assembly: 'Microsoft.VisualStudio.Web.PageInspector.HtmlParser, Version=2.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.
