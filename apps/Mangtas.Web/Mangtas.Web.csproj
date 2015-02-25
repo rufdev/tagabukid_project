@@ -274,14 +274,6 @@
       <Project>{86f86650-ee3c-4372-8fec-40c2fe015022}</Project>
       <Name>Service.Pattern</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Test.Entities\Test.Entities.csproj">
-      <Project>{86bf08a9-69e7-40a9-9e3b-3bb210c3f6c1}</Project>
-      <Name>Test.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Test.Service\Test.Service.csproj">
-      <Project>{eb0a370b-6ea2-411e-ab5e-ca58111af899}</Project>
-      <Name>Test.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
