@@ -1,8 +1,7 @@
-﻿using Mangtas.Web;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(Startup))]
+[assembly: OwinStartupAttribute(typeof(Mangtas.Web.Startup))]
 namespace Mangtas.Web
 {
     public partial class Startup
