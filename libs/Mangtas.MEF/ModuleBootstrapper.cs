@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Mangtas.MEF
 {
-    public class Bootstrapper
+    public class ModuleBootstrapper
     {
         private static CompositionContainer CompositionContainer;
         private static bool IsLoaded = false;

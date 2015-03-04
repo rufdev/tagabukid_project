@@ -1,6 +1,8 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -16,12 +18,39 @@ namespace Mangtas.Web.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+
+        [Display(Name="Postal Code")]
+        public string PostalCode { get; set; }
+
+        public string DisplayAddress
+        {
+            get
+            {
+                string dspAddress =
+                    string.IsNullOrWhiteSpace(this.Address) ? "" : this.Address;
+                string dspCity =
+                    string.IsNullOrWhiteSpace(this.City) ? "" : this.City;
+                string dspState =
+                    string.IsNullOrWhiteSpace(this.State) ? "" : this.State;
+                string dspPostalCode =
+                    string.IsNullOrWhiteSpace(this.PostalCode) ? "" : this.PostalCode;
+
+                return string
+                    .Format("{0} {1} {2} {3}", dspAddress, dspCity, dspState, dspPostalCode);
+            }
+        }
     }
+
+   
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("IdentityContext", throwIfV1Schema: false)
         {
         }
 
