@@ -3,10 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ComboBox x:Name="cmbOffice" HorizontalAlignment="Left" Margin="105,35,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBox Width="120"/>
-        </ComboBox>
-        <ComboBox x:Name="cmbPersonnel" HorizontalAlignment="Left" Margin="105,62,0,0" VerticalAlignment="Top" Width="120"/>
-
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="23,20,0,0" VerticalAlignment="Top" Width="75" Click="LoginButton_Click"/>
+        <Button x:Name="GetData" Content="Get Data" HorizontalAlignment="Left" Margin="23,54,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.487,-0.357" Click="GetData_Click"/>
+        <TextBlock x:Name="ResultArea" HorizontalAlignment="Left" Margin="115,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="118" Width="374"/>
     </Grid>
 </Window>

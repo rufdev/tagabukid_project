@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json.Linq;
 
 namespace WpfApplication1
 {
@@ -21,75 +25,51 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
-
         
         public MainWindow()
         {
             InitializeComponent();
-            //var test = new ArrayList() { "TEST", "TEST2", "TEST3" };
-
-            //var test2 = new Dictionary<int, string>();
-            //test2.Add(1,"TEST");
-            //test2.Add(2, "TEST2");
-            //test2.Add(3, "TEST3");
-            //test2.Add(4, "TEST4");
-
-            ////this.cmbTest.Items.Add("TEST");
-            ////this.cmbTest.Items.Add("TEST1");
-            ////this.cmbTest.Items.Add("TEST");
-            //foreach (var t in test2)
-            //{
-            //    this.cmbTest.Items.Add(t);
-            //}
-            var offices = new List<Office>()
-            {
-                new Office()
-                {
-                    Id = 1,
-                    Name = "PICTD"
-                },
-                new Office()
-                {
-                    Id = 2,
-                    Name = "PHRMO"
-                }
-            };
-
-            var personnels = new List<Personnel>()
-            {
-                new Personnel()
-                {
-                    Id = 1,
-                    FirstName = "Dabid",
-                    LastName = "Cabatingan",
-                    OfficeId = 1
-
-                },
-                new Personnel()
-                {
-                    Id = 1,
-                    FirstName = "Rufy",
-                    LastName = "Aguilar",
-                    OfficeId = 2
-
-                }
-            };
-
-            
-            foreach (var t in offices)
-            {
-                this.cmbOffice.Items.Add(t);
-            }
-
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            var c = new HttpClient();
+            c.BaseAddress = new Uri("https://localhost:44307/");
+            //HttpRequestMessage req = new HttpRequestMessage(HttpMethod.Post, "Token");
 
-            //this.cmbTest.SelectedItem.ToString().ToDictionary();
-            //this.textbox1.Text = ;
+            var keyValue = new List<KeyValuePair<string, string>>();
+            keyValue.Add(new KeyValuePair<string, string>("grant_type", "password"));
+            keyValue.Add(new KeyValuePair<string, string>("username", "admin@example.com"));
+            keyValue.Add(new KeyValuePair<string, string>("password", "Admin@123456"));
+            
+            var content = new FormUrlEncodedContent(keyValue);
+            var response = await c.PostAsync("https://localhost:44307/Token", content);
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            ResultArea.Text = JObject.Parse(result).SelectToken("access_token").ToString();
+            
         }
 
-       
+        private async void GetData_Click(object sender, RoutedEventArgs e)
+        {
+            var c = new HttpClient();
+            c.BaseAddress = new Uri("https://localhost:44307/");
+            
+            c.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ResultArea.Text);
+            var response = await c.GetAsync("api/testplugwebapi");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            ResultArea.Text = result;
+            
+        }
+
     }
+
+    static class GlobalToken
+    {
+        public static string Token { get; set; }
+    }
+
 }
