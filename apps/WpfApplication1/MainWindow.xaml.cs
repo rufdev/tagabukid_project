@@ -16,7 +16,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using WpfApplication1.ViewModels;
 
 namespace WpfApplication1
 {
@@ -47,23 +49,41 @@ namespace WpfApplication1
             response.EnsureSuccessStatusCode();
 
             var result = await response.Content.ReadAsStringAsync();
-            ResultArea.Text = JObject.Parse(result).SelectToken("access_token").ToString();
+            GlobalToken.Token = JObject.Parse(result).SelectToken("access_token").ToString();
             
         }
 
-        private async void GetData_Click(object sender, RoutedEventArgs e)
+        //private async void GetData_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var c = new HttpClient();
+        //    c.BaseAddress = new Uri("https://localhost:44307/");
+            
+        //    c.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ResultArea.Text);
+        //    var response = await c.GetAsync("api/testplugwebapi");
+        //    response.EnsureSuccessStatusCode();
+
+        //    var result = await response.Content.ReadAsStringAsync();
+        //    ResultArea.Text = result;
+            
+        //}
+
+        private async void Save_Click(object sender, RoutedEventArgs e)
         {
             var c = new HttpClient();
             c.BaseAddress = new Uri("https://localhost:44307/");
-            
-            c.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ResultArea.Text);
-            var response = await c.GetAsync("api/testplugwebapi");
-            response.EnsureSuccessStatusCode();
 
-            var result = await response.Content.ReadAsStringAsync();
-            ResultArea.Text = result;
+            c.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GlobalToken.Token);
+            PersonViewModel person = new PersonViewModel();
+            person.Name = Person_Name.Text;
+            string jperson = JsonConvert.SerializeObject(person);
+            HttpContent content = new StringContent(jperson, Encoding.UTF8, "application/json");
+            var response = await c.PostAsync("api/personservice", content);
+            response.EnsureSuccessStatusCode();
             
+            //var result = await response.Content.ReadAsStringAsync();
+            MessageBox.Show(response.StatusCode.ToString());
         }
+
 
     }
 

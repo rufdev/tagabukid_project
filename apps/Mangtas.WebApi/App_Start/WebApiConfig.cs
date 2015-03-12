@@ -38,6 +38,7 @@ namespace Mangtas.WebApi
             builder.RegisterType<UnitOfWork>().As<IUnitOfWorkAsync>().InstancePerRequest();
 
             builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepositoryAsync<>)).InstancePerRequest();
+
             builder.RegisterAssemblyTypes(allassemblies)
                .Where(t => t.Name.Contains("BukService"))
                .As(t => t.GetInterfaces().Single(i => i.Name == "I" + t.Name)).InstancePerRequest();
