@@ -5,20 +5,21 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
         xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
         xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" 
-        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" 
-        x:Class="Mangtas.Wall.Wall"
+        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+        xmlns:regions="http://www.codeplex.com/CompositeWPF"
+        x:Class="Mangtas.Wall.Shell"
         Title="BUKIDNON WALL" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <DockPanel>
-            <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010">
+            <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" ToolbarShowMode="Hide" IsMinimized="True">
                 <dxr:RibbonControl.ApplicationMenu>
                     <dxr:BackstageViewControl>
-                        <dxr:BackstageTabItem Content="Last documents">
+                        <dxr:BackstageTabItem Content="Login">
                             <dxr:BackstageTabItem.ControlPane>
                                 <Grid/>
                             </dxr:BackstageTabItem.ControlPane>
                         </dxr:BackstageTabItem>
-                        <dxr:BackstageTabItem Content="Properties">
+                        <dxr:BackstageTabItem Content="Logout">
                             <dxr:BackstageTabItem.ControlPane>
                                 <Grid/>
                             </dxr:BackstageTabItem.ControlPane>
@@ -26,17 +27,17 @@
                         <dxr:BackstageButtonItem Content="Close" Glyph="{dx:DXImage Image=Close_32x32.png}"/>
                     </dxr:BackstageViewControl>
                 </dxr:RibbonControl.ApplicationMenu>
-                <dxr:RibbonControl.ToolbarItems>
+                <!--<dxr:RibbonControl.ToolbarItems>
                     <dxb:BarButtonItemLink BarItemName="biOpen"/>
                     <dxb:BarButtonItemLink BarItemName="biNew"/>
-                </dxr:RibbonControl.ToolbarItems>
+                </dxr:RibbonControl.ToolbarItems>-->
                 <dxr:RibbonDefaultPageCategory>
-                    <dxr:RibbonPage Caption="Home">
+                    <!--<dxr:RibbonPage Caption="Home">
                         <dxr:RibbonPageGroup Caption="File">
                             <dxb:BarButtonItem x:Name="biOpen" Content="Open" Glyph="{dx:DXImage Image=Open_16x16.png}" LargeGlyph="{dx:DXImage Image=Open_32x32.png}"/>
                             <dxb:BarButtonItem x:Name="biNew" Content="New" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}"/>
                         </dxr:RibbonPageGroup>
-                    </dxr:RibbonPage>
+                    </dxr:RibbonPage>-->
                 </dxr:RibbonDefaultPageCategory>
             </dxr:RibbonControl>
             <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom">
@@ -55,28 +56,31 @@
             <Grid>
                 <dxdo:DockLayoutManager>
                     <dxdo:LayoutGroup>
-                        <dxdo:LayoutPanel Caption="Navigation menu" ItemWidth="0.5*">
-                            <dxn:NavBarControl>
+                        <dxdo:LayoutPanel Caption="Navigation menu" ItemWidth="0.47*" ShowCloseButton="False" AllowClose="False">
+                            <dxn:NavBarControl AllowSelectDisabledItem="False">
                                 <dxn:NavBarControl.View>
-                                    <dxn:SideBarView/>
+                                    <dxn:ExplorerBarView/>
                                 </dxn:NavBarControl.View>
-                                <dxn:NavBarGroup Header="Group 1">
+                                <!--<dxn:NavBarGroup Header="Group 1">
                                     <dxn:NavBarItem Content="Item 1"/>
                                     <dxn:NavBarItem Content="Item 2"/>
                                 </dxn:NavBarGroup>
                                 <dxn:NavBarGroup Header="Group 2">
                                     <dxn:NavBarItem Content="Item 1"/>
                                     <dxn:NavBarItem Content="Item 2"/>
-                                </dxn:NavBarGroup>
+                                </dxn:NavBarGroup>-->
                             </dxn:NavBarControl>
                         </dxdo:LayoutPanel>
-                        <dxdo:DocumentGroup ItemWidth="1.47*">
-                            <dxdo:DocumentPanel Caption="Document">
-                                <Grid/>
+                        <dxdo:DocumentGroup ItemWidth="1.53*">
+                            <dxdo:DocumentPanel Caption="Document" ShowCloseButton="False" AllowClose="False">
+                                <Grid>
+                                    <ItemsControl Name="MainRegion" regions:RegionManager.RegionName="MainRegion"/>
+                                </Grid>
                             </dxdo:DocumentPanel>
                         </dxdo:DocumentGroup>
                     </dxdo:LayoutGroup>
                 </dxdo:DockLayoutManager>
+
             </Grid>
         </DockPanel>
 

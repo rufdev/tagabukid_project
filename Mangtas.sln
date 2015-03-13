@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Pattern.Ef6", "l
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Pattern", "libs\Service.Pattern\Service.Pattern.csproj", "{86F86650-EE3C-4372-8FEC-40C2FE015022}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{EBE97F96-71D8-46B6-9360-B77517FE5F32}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webservice.modules", "webservice.modules", "{EBE97F96-71D8-46B6-9360-B77517FE5F32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{777F3DCC-3344-440B-B0E3-4A4260BE7175}"
 EndProject
@@ -35,6 +35,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangtas.Sample", "apps\Mangtas.WebApi\Modules\Mangtas.Sample\Mangtas.Sample.csproj", "{EF055B96-ECFC-4F81-84C9-0941E62487C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangtas.Wall", "apps\Mangtas.Wall\Mangtas.Wall.csproj", "{953E1476-1328-42C9-AA64-2A03653258F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mangtas.Module", "apps\Mangtas.Module\Mangtas.Module.csproj", "{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -423,6 +425,45 @@ Global
 		{953E1476-1328-42C9-AA64-2A03653258F9}.Release|Windows-x64.ActiveCfg = Release|Any CPU
 		{953E1476-1328-42C9-AA64-2A03653258F9}.Release|Windows-x86.ActiveCfg = Release|Any CPU
 		{953E1476-1328-42C9-AA64-2A03653258F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Android.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Any CPU.Build.0 = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|iOS.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows Phone (Universal).ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows Phone 8.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows-x64.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|Windows-x86.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Distribution|x86.ActiveCfg = Debug|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Android.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|iOS.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows Phone (Universal).ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows Phone 8.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows-AnyCPU.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|Windows-x86.ActiveCfg = Release|Any CPU
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -437,5 +478,6 @@ Global
 		{3ADE3AB3-07AF-4577-922A-A4F0617F14BA} = {EBE97F96-71D8-46B6-9360-B77517FE5F32}
 		{EF055B96-ECFC-4F81-84C9-0941E62487C8} = {EBE97F96-71D8-46B6-9360-B77517FE5F32}
 		{953E1476-1328-42C9-AA64-2A03653258F9} = {777F3DCC-3344-440B-B0E3-4A4260BE7175}
+		{DED08F18-8F24-4DAD-BD96-837A1DC3BDF1} = {777F3DCC-3344-440B-B0E3-4A4260BE7175}
 	EndGlobalSection
 EndGlobal

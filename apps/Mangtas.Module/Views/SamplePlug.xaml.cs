@@ -10,19 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Mangtas.Wall
+namespace Mangtas.Module.Views
 {
     /// <summary>
-    /// Interaction logic for Wall.xaml
+    /// Interaction logic for SamplePlug.xaml
     /// </summary>
-    public partial class Wall : Window
+    public partial class SamplePlug : UserControl
     {
-        public Wall()
+        public SamplePlug()
         {
             InitializeComponent();
-            
         }
     }
 }
