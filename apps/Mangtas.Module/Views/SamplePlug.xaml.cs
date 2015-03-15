@@ -12,17 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfHelpers;
 
 namespace Mangtas.Module.Views
 {
     /// <summary>
     /// Interaction logic for SamplePlug.xaml
     /// </summary>
-    public partial class SamplePlug : UserControl
+    public partial class SamplePlug : UserControl , IPanelInfo
     {
         public SamplePlug()
         {
             InitializeComponent();
+        }
+        public string GetPanelCaption()
+        {
+            return "Sample Plugin";
         }
     }
 }

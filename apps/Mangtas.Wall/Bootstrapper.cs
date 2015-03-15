@@ -5,8 +5,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using DevExpress.Xpf.Docking;
+using Mangtas.Wall.Adapters;
 using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Prism.UnityExtensions;
+using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using System.IO;
 
@@ -14,6 +19,7 @@ namespace Mangtas.Wall
 {
     class Bootstrapper : UnityBootstrapper
     {
+        #region manual bootstrapping
         //protected override DependencyObject CreateShell()
         //{
         //    return this.Container.Resolve<Shell>();
@@ -48,6 +54,7 @@ namespace Mangtas.Wall
         //    //
         //    //
         //}
+        #endregion
 
         #region Quickie
         public Bootstrapper()
@@ -146,6 +153,21 @@ namespace Mangtas.Wall
             return catalog;
         }
 
+       
+
+        protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
+        {
+            RegionAdapterMappings mappings = base.ConfigureRegionAdapterMappings();
+            if (mappings != null)
+            {
+                //mappings.RegisterMapping(typeof(DockLayoutManager), ServiceLocator.Current.GetInstance<DockManagerAdapter>());
+                mappings.RegisterMapping(typeof(DocumentGroup), ServiceLocator.Current.GetInstance<DocumentGroupAdapter>());
+
+            }
+            return mappings;
+        }
 
     }
+
+   
 }
