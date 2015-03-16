@@ -11,25 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfHelpers;
 
-namespace Mangtas.Module.Views
+namespace Mangtas.Main
 {
     /// <summary>
-    /// Interaction logic for SamplePlug.xaml
+    /// Interaction logic for Shell.xaml
     /// </summary>
-    [PartCreationPolicy(CreationPolicy.NonShared), Export]
-    public partial class SamplePlug : UserControl , IPanelInfo
+    [Export]
+    public partial class Shell : Window
     {
-        public SamplePlug()
+        public Shell()
         {
             InitializeComponent();
-        }
-        public string GetPanelCaption()
-        {
-            return "Sample Plugin";
         }
     }
 }

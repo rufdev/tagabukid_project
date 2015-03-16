@@ -8,8 +8,8 @@
         xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
         xmlns:regions="http://www.codeplex.com/CompositeWPF"
         xmlns:WpfHelpers="clr-namespace:WpfHelpers;assembly=WpfHelpers"
-        x:Class="Mangtas.Wall.Shell"
-        Title="BUKIDNON WALL" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        x:Class="Mangtas.Main.Shell"
+        Title="BUKIDNON Shell" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <DockPanel>
             <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" ToolbarShowMode="Hide" IsMinimized="True">

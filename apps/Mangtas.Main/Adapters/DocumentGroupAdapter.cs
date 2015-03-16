@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Specialized;
+using System.ComponentModel.Composition;
 using DevExpress.Xpf.Docking;
 using Microsoft.Practices.Prism.Regions;
 using WpfHelpers;
 
-namespace Mangtas.Wall.Adapters
+namespace Mangtas.Main.Adapters
 {
+    [Export(typeof(DocumentGroupAdapter)), PartCreationPolicy(CreationPolicy.NonShared)]
     public class DocumentGroupAdapter : RegionAdapterBase<DocumentGroup>
     {
-        
+        [ImportingConstructor]
         public DocumentGroupAdapter(IRegionBehaviorFactory behaviorFactory) :
             base(behaviorFactory)
         {
