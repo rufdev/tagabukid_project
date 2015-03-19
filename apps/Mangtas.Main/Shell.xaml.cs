@@ -29,7 +29,7 @@ namespace Mangtas.Main
         private void RibbonControl_OnBackstageClosed(object sender, EventArgs e)
         {
             //check if naka login if wala
-            this.BackstageViewControl.IsOpen = true;
+            this.BackstageViewControl.Close();
             MessageBox.Show("Please login");
         }
     }
