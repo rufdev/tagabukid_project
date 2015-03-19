@@ -4,12 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfHelpers
+namespace WpfHelpers.MenuBar
 {
-    public interface INavBarGroupView
-    {
-        string GroupName { get; }
-    }
     public interface INavBarItemView
     {
         string GroupName { get; }

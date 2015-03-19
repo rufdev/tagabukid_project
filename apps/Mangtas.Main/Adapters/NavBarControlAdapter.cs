@@ -2,6 +2,7 @@
 using DevExpress.Xpf.NavBar;
 using Microsoft.Practices.Prism.Regions;
 using WpfHelpers;
+using WpfHelpers.MenuBar;
 
 namespace Mangtas.Main.Adapters
 {

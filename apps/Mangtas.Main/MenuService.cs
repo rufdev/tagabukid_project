@@ -36,6 +36,7 @@ namespace Mangtas.Main
                     return button;
             }
             NavBarGroup newParent = new NavBarGroup { Header = parentName, Name = "bsi" + Regex.Replace(parentName, "[^a-zA-Z0-9]", "") };
+            newParent.IsExpanded = false;
             manager.Groups.Add(newParent);
             return newParent;
         }

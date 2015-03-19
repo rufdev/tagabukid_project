@@ -11,26 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DevExpress.Xpf.Ribbon;
 
-namespace Mangtas.Main
+namespace Mangtas.Module.Admin.Views
 {
     /// <summary>
-    /// Interaction logic for Shell.xaml
+    /// Interaction logic for Logout.xaml
     /// </summary>
-    [Export]
-    public partial class Shell : Window
+    [PartCreationPolicy(CreationPolicy.NonShared), Export]
+    public partial class Logout : BackstageButtonItem
     {
-        public Shell()
+        public Logout()
         {
             InitializeComponent();
-        }
-
-        private void RibbonControl_OnBackstageClosed(object sender, EventArgs e)
-        {
-            //check if naka login if wala
-            this.BackstageViewControl.IsOpen = true;
-            MessageBox.Show("Please login");
         }
     }
 }

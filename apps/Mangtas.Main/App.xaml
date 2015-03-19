@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Mangtas.Main.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             Startup="OnAppStartup_UpdateThemeName">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Startup="OnAppStartup_UpdateThemeName"
+             >
     <Application.Resources>
          
     </Application.Resources>

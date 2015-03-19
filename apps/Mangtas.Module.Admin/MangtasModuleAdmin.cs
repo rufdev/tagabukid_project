@@ -4,7 +4,8 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Mangtas.Module.Views;
+using DevExpress.Xpf.Editors.Helpers;
+using Mangtas.Module.Admin.Views;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.MefExtensions.Modularity;
 using Microsoft.Practices.Prism.Modularity;
@@ -14,16 +15,16 @@ using Microsoft.Practices.Unity;
 using WpfHelpers;
 using WpfHelpers.MenuBar;
 
-namespace Mangtas.Module
+namespace Mangtas.Module.Admin
 {
-    [ModuleExport(typeof(MangtasModule))]
-    public class MangtasModule : IModule
+    [ModuleExport(typeof(MangtasModuleAdmin))]
+    public class MangtasModuleAdmin : IModule
     {
         private readonly IRegionManager _regionManager;
         private readonly IMenuService menuService;
         private readonly DelegateCommand showSamplePlugin;
         [ImportingConstructor]
-        public MangtasModule(IRegionManager regionManager, IMenuService menuService)
+        public MangtasModuleAdmin(IRegionManager regionManager, IMenuService menuService)
         {
             _regionManager = regionManager;
             this.menuService = menuService;
@@ -32,7 +33,11 @@ namespace Mangtas.Module
 
         public void Initialize()
         {
-            //menuService.Add(new MenuItem() { Command = showSamplePlugin, Parent = "Group Menu", Title = "Sample Plugin" });
+            _regionManager.RegisterViewWithRegion(RegionNames.BackStageNav, typeof(LoginManager));
+            _regionManager.RegisterViewWithRegion(RegionNames.BackStageNav, typeof(Logout));
+            _regionManager.RegisterViewWithRegion("LoginFormRegion", typeof(LoginForm));
+
+            //menuService.Add(new MenuItem() { Command = showSamplePlugin, Parent = "New Module", Title = "Sample link 1" });
         }
 
         void ShowSamplePlugin()

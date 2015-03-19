@@ -9,24 +9,30 @@
         xmlns:regions="http://www.codeplex.com/CompositeWPF"
         xmlns:WpfHelpers="clr-namespace:WpfHelpers;assembly=WpfHelpers"
         x:Class="Mangtas.Main.Shell"
-        Title="BUKIDNON Shell" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="BUKIDNON WALL" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <DockPanel>
-            <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" ToolbarShowMode="Hide" IsMinimized="True">
+            <dxr:RibbonControl Name="RibonControl"  BackstageClosed="RibbonControl_OnBackstageClosed" DockPanel.Dock="Top" ToolbarShowMode="Hide" IsMinimized="True" RibbonStyle="Office2010" >
                 <dxr:RibbonControl.ApplicationMenu>
-                    <dxr:BackstageViewControl>
-                        <dxr:BackstageTabItem Content="Login">
+                    <dxr:BackstageViewControl Name="BackstageViewControl"  IsOpen="True" regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.BackStageNav}">
+                        <!--<dxr:BackstageButtonItem Content="New" MinWidth="150" Glyph="{dx:DXImage Image=New_16x16.png}" Command="{Binding ElementName=richControl, Path=ClearCommand}" />
+                        <dxr:BackstageButtonItem Content="Open" Glyph="{dx:DXImage Image=Open_16x16.png}" />
+                        <dxr:BackstageTabItem Content="Recent">
                             <dxr:BackstageTabItem.ControlPane>
-                                <Grid/>
+                                <ContentControl Template="{StaticResource RecentControlPaneTemplate}"  SnapsToDevicePixels="True"/>
                             </dxr:BackstageTabItem.ControlPane>
                         </dxr:BackstageTabItem>
-                        <dxr:BackstageTabItem Content="Logout">
+                        <dxr:BackstageTabItem Content="Options">
                             <dxr:BackstageTabItem.ControlPane>
-                                <Grid/>
+                                <ContentControl Template="{StaticResource OptionsControlPaneTemplate}" />
                             </dxr:BackstageTabItem.ControlPane>
                         </dxr:BackstageTabItem>
-                        <ItemsControl Name="BackStageTabRegion" />
-                        <dxr:BackstageButtonItem Content="Close" Glyph="{dx:DXImage Image=Close_32x32.png}"/>
+                        <dxr:BackstageTabItem Content="Help">
+                            <dxr:BackstageTabItem.ControlPane>
+                                <ContentControl Template="{StaticResource HelpControlPaneTemplate}" />
+                            </dxr:BackstageTabItem.ControlPane>
+                        </dxr:BackstageTabItem>-->
+                        <!--<dxr:BackstageButtonItem Content="Close" Glyph="{dx:DXImage Image=Close_32x32.png}" />-->
                     </dxr:BackstageViewControl>
                 </dxr:RibbonControl.ApplicationMenu>
                 <!--<dxr:RibbonControl.ToolbarItems>
@@ -42,7 +48,7 @@
                     </dxr:RibbonPage>-->
                 </dxr:RibbonDefaultPageCategory>
             </dxr:RibbonControl>
-            <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom">
+            <!--<dxr:RibbonStatusBarControl DockPanel.Dock="Bottom">
                 <dxr:RibbonStatusBarControl.LeftItems>
                     <dxb:BarStaticItem x:Name="biRow" Content="Row:" ShowBorder="False"/>
                     <dxb:BarStaticItem x:Name="biRowValue" Content="1"/>
@@ -54,15 +60,16 @@
                     <dxb:BarCheckItem x:Name="biCenter" Glyph="{dx:DXImage Image=AlignCenter_16x16.png}" GroupIndex="1"/>
                     <dxb:BarCheckItem x:Name="biRight" Glyph="{dx:DXImage Image=AlignRight_16x16.png}" GroupIndex="1"/>
                 </dxr:RibbonStatusBarControl.RightItems>
-            </dxr:RibbonStatusBarControl>
+            </dxr:RibbonStatusBarControl>-->
             <Grid>
                 <dxdo:DockLayoutManager ClosingBehavior="ImmediatelyRemove">
                     <dxdo:LayoutGroup>
                         <dxdo:LayoutPanel Caption="Navigation menu" ItemWidth="0.47*" ShowCloseButton="False" AllowClose="False">
-                            <dxn:NavBarControl Name="NavBarContainer"> <!--AllowSelectDisabledItem="False" regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.NavVarControlRegion}">-->
+                            <dxn:NavBarControl Name="NavBarContainer">
                                 <dxn:NavBarControl.View>
                                     <dxn:ExplorerBarView/>
                                 </dxn:NavBarControl.View>
+                                <!--regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.NavVarControlRegion}">-->
                             </dxn:NavBarControl>
                         </dxdo:LayoutPanel>
                         <dxdo:DocumentGroup Name="DocumentContainer" ClosePageButtonShowMode="InActiveTabPageHeader" DestroyOnClosingChildren="False" ClosingBehavior="ImmediatelyRemove" ItemWidth="1.53*" regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.DocumentRegion}">

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using DevExpress.Xpf.Ribbon;
 using Mangtas.Main.Adapters;
 using Microsoft.Practices.Prism.MefExtensions;
 using Microsoft.Practices.Prism.Modularity;
@@ -42,6 +43,7 @@ namespace Mangtas.Main
                 //mappings.RegisterMapping(typeof(DockLayoutManager), ServiceLocator.Current.GetInstance<DockManagerAdapter>());
                 mappings.RegisterMapping(typeof(DocumentGroup), Container.GetExportedValue<DocumentGroupAdapter>());
                 mappings.RegisterMapping(typeof(NavBarControl), Container.GetExportedValue<NavBarControlAdapter>());
+                mappings.RegisterMapping(typeof(BackstageViewControl), Container.GetExportedValue<BackstageViewControlAdapter>());
 
 
             }
