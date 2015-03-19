@@ -17,7 +17,7 @@ namespace Mangtas.MEF
 
         public IController CreateController(RequestContext requestContext, string controllerName)
         {
-            var controller = Bootstrapper.GetInstance<IController>(controllerName);
+            var controller = ModuleBootstrapper.GetInstance<IController>(controllerName);
 
             if (controller == null)
                 throw new Exception("Controller not found!");

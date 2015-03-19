@@ -1,0 +1,83 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" 
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" 
+        xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" 
+        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+        xmlns:regions="http://www.codeplex.com/CompositeWPF"
+        xmlns:WpfHelpers="clr-namespace:WpfHelpers;assembly=WpfHelpers"
+        x:Class="Mangtas.Wall.Shell"
+        Title="BUKIDNON WALL" Height="768" Width="1024" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <DockPanel>
+            <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2010" ToolbarShowMode="Hide" IsMinimized="True">
+                <dxr:RibbonControl.ApplicationMenu>
+                    <dxr:BackstageViewControl>
+                        <dxr:BackstageTabItem Content="Login">
+                            <dxr:BackstageTabItem.ControlPane>
+                                <Grid/>
+                            </dxr:BackstageTabItem.ControlPane>
+                        </dxr:BackstageTabItem>
+                        <dxr:BackstageTabItem Content="Logout">
+                            <dxr:BackstageTabItem.ControlPane>
+                                <Grid/>
+                            </dxr:BackstageTabItem.ControlPane>
+                        </dxr:BackstageTabItem>
+                        <ItemsControl Name="BackStageTabRegion" />
+                        <dxr:BackstageButtonItem Content="Close" Glyph="{dx:DXImage Image=Close_32x32.png}"/>
+                    </dxr:BackstageViewControl>
+                </dxr:RibbonControl.ApplicationMenu>
+                <!--<dxr:RibbonControl.ToolbarItems>
+                    <dxb:BarButtonItemLink BarItemName="biOpen"/>
+                    <dxb:BarButtonItemLink BarItemName="biNew"/>
+                </dxr:RibbonControl.ToolbarItems>-->
+                <dxr:RibbonDefaultPageCategory>
+                    <!--<dxr:RibbonPage Caption="Home">
+                        <dxr:RibbonPageGroup Caption="File">
+                            <dxb:BarButtonItem x:Name="biOpen" Content="Open" Glyph="{dx:DXImage Image=Open_16x16.png}" LargeGlyph="{dx:DXImage Image=Open_32x32.png}"/>
+                            <dxb:BarButtonItem x:Name="biNew" Content="New" Glyph="{dx:DXImage Image=New_16x16.png}" LargeGlyph="{dx:DXImage Image=New_32x32.png}"/>
+                        </dxr:RibbonPageGroup>
+                    </dxr:RibbonPage>-->
+                </dxr:RibbonDefaultPageCategory>
+            </dxr:RibbonControl>
+            <dxr:RibbonStatusBarControl DockPanel.Dock="Bottom">
+                <dxr:RibbonStatusBarControl.LeftItems>
+                    <dxb:BarStaticItem x:Name="biRow" Content="Row:" ShowBorder="False"/>
+                    <dxb:BarStaticItem x:Name="biRowValue" Content="1"/>
+                    <dxb:BarStaticItem x:Name="biColumn" Content="Column:" ShowBorder="False"/>
+                    <dxb:BarStaticItem x:Name="biColumnValue" Content="1"/>
+                </dxr:RibbonStatusBarControl.LeftItems>
+                <dxr:RibbonStatusBarControl.RightItems>
+                    <dxb:BarCheckItem x:Name="biLeft" Glyph="{dx:DXImage Image=AlignLeft_16x16.png}" GroupIndex="1" IsChecked="True"/>
+                    <dxb:BarCheckItem x:Name="biCenter" Glyph="{dx:DXImage Image=AlignCenter_16x16.png}" GroupIndex="1"/>
+                    <dxb:BarCheckItem x:Name="biRight" Glyph="{dx:DXImage Image=AlignRight_16x16.png}" GroupIndex="1"/>
+                </dxr:RibbonStatusBarControl.RightItems>
+            </dxr:RibbonStatusBarControl>
+            <Grid>
+                <dxdo:DockLayoutManager ClosingBehavior="ImmediatelyRemove">
+                    <dxdo:LayoutGroup>
+                        <dxdo:LayoutPanel Caption="Navigation menu" ItemWidth="0.47*" ShowCloseButton="False" AllowClose="False">
+                            <dxn:NavBarControl Name="NavBarContainer"> <!--AllowSelectDisabledItem="False" regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.NavVarControlRegion}">-->
+                                <dxn:NavBarControl.View>
+                                    <dxn:ExplorerBarView/>
+                                </dxn:NavBarControl.View>
+                            </dxn:NavBarControl>
+                        </dxdo:LayoutPanel>
+                        <dxdo:DocumentGroup Name="DocumentContainer" ClosePageButtonShowMode="InActiveTabPageHeader" DestroyOnClosingChildren="False" ClosingBehavior="ImmediatelyRemove" ItemWidth="1.53*" regions:RegionManager.RegionName="{x:Static WpfHelpers:RegionNames.DocumentRegion}">
+                            <dxdo:DocumentPanel Caption="Home" ShowCloseButton="False" AllowClose="False">
+                                <Grid>
+                                </Grid>
+                            </dxdo:DocumentPanel>
+                        </dxdo:DocumentGroup>
+                    </dxdo:LayoutGroup>
+                </dxdo:DockLayoutManager>
+
+            </Grid>
+        </DockPanel>
+
+
+
+    </Grid>
+</Window>
