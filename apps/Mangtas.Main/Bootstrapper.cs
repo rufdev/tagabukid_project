@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,8 +23,9 @@ namespace Mangtas.Main
     {
         protected override void ConfigureAggregateCatalog()
         {
-            AggregateCatalog.Catalogs.Add(new System.ComponentModel.Composition.Hosting.AssemblyCatalog(typeof(Bootstrapper).Assembly));
-            AggregateCatalog.Catalogs.Add(new System.ComponentModel.Composition.Hosting.AssemblyCatalog(typeof(RegionNames).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(Bootstrapper).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(RegionNames).Assembly));
+            //AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(MangtasModuleAdmin).Assembly));
         }
         protected override DependencyObject CreateShell()
         {
@@ -52,10 +54,8 @@ namespace Mangtas.Main
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
-            //var basedir = AppDomain.CurrentDomain.BaseDirectory;
             string modulesdir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
-            DynamicDirectoryModuleCatalog catalog = new DynamicDirectoryModuleCatalog(Path.Combine(modulesdir, "modules"));
-            return catalog;
+            return new DirectoryModuleCatalog() { ModulePath = Path.Combine(modulesdir, "modules") };
         }
     }
 }

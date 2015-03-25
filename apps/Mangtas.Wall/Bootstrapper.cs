@@ -147,14 +147,20 @@ namespace Mangtas.Wall
             App.Current.MainWindow = (Window)Shell;
             App.Current.MainWindow.Show();
         }
+        //protected override IModuleEnumerator GetModuleEnumerator()
+        //{
+        //    IModuleEnumerator enumerator = new CombinedModuleEnumerator(
+        //        Directory.GetCurrentDirectory());
+        //    return enumerator;
+        //}
 
-        protected override IModuleCatalog CreateModuleCatalog()
-        {
-            //var basedir = AppDomain.CurrentDomain.BaseDirectory;
-            string modulesdir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
-            DynamicDirectoryModuleCatalog catalog = new DynamicDirectoryModuleCatalog(Path.Combine(modulesdir, "modules"));
-            return catalog;
-        }
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    //var basedir = AppDomain.CurrentDomain.BaseDirectory;
+        //    string modulesdir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
+        //    DynamicDirectoryModuleCatalog catalog = new DynamicDirectoryModuleCatalog(Path.Combine(modulesdir, "modules"));
+        //    return catalog;
+        //}
 
        
 

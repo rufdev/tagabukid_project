@@ -13,27 +13,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Mangtas.Module.Admin.ViewModels;
+using WpfHelpers;
 
-namespace Mangtas.Module.Admin.Views
+namespace $safeprojectname$.Views
 {
     /// <summary>
-    /// Interaction logic for LoginForm.xaml
+    /// Interaction logic for SamplePlug.xaml
     /// </summary>
     [PartCreationPolicy(CreationPolicy.NonShared), Export]
-    public partial class LoginForm : ContentControl
+    public partial class SamplePlug : UserControl , IPanelInfo
     {
-        public LoginForm()
+        public SamplePlug()
         {
             InitializeComponent();
         }
-        [Import]
-        public LoginViewModel ViewModel
+        public string GetPanelCaption()
         {
-            set
-            {
-                this.DataContext = value;
-            }
+            return "$safeprojectname$";
         }
     }
 }

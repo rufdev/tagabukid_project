@@ -9,8 +9,9 @@
         <Label Content="Please enter your username and password." HorizontalAlignment="Left" Margin="22,16,0,0" VerticalAlignment="Top" Width="305" FontWeight="Bold" FontSize="16" FontFamily="Calibri"/>
         <Label Content="Username:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,52,0,0" Width="93" FontFamily="Calibri" FontSize="14" Height="23"/>
         <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,80,0,0" Width="93" RenderTransformOrigin="0.473,0.249" FontFamily="Calibri" FontSize="14" Height="23"/>
-        <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Height="23" Margin="120,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" RenderTransformOrigin="-0.041,0.219" />
-        <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="120,74,0,0" VerticalAlignment="Top" Width="180" Height="23" Padding="4,3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="120,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" RenderTransformOrigin="-0.041,0.219" />
+        <PasswordBox HorizontalAlignment="Left" Margin="120,74,0,0" VerticalAlignment="Top" Width="180" Height="23" Padding="4,3"/>
+        <Button Command="{Binding SignInCommand}" Content="Login" HorizontalAlignment="Left" Margin="225,119,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 
 </ContentControl>
